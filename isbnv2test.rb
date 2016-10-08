@@ -42,6 +42,12 @@ def validate_isbn_10?(isbn)
 		end
 	end
 
+	isbn.each_with_index do |value, index|	
+		if value == ""						#deletes empty elements
+			checkdigit.delete_at(index)
+		end
+	end
+
 	isbn = isbn.map(&:to_i)	#turns the isbn string array["1", "2", "3"] into an integer array[1, 2, 3]
 
 	sum = 0
