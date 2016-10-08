@@ -15,8 +15,6 @@ end
 
 def validate_isbn_10?(isbn)
 
-	valid_isbn_10?(isbn)
-	
 	isbn = isbn.to_s.chars.map(&:to_s)	#turns in
 
 	checkdigit = isbn.last			#Creating a variable for the last element, the check digit, to test against at the end in order to validate the ISBN.
