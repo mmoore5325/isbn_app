@@ -38,13 +38,7 @@ def validate_isbn_10?(isbn)
 
 	isbn.each_with_index do |value, index|	
 		if value == ""						#deletes empty elements
-			checkdigit.delete_at(index)
-		end
-	end
-
-	isbn.each_with_index do |value, index|	
-		if value == ""						#deletes empty elements
-			checkdigit.delete_at(index)
+			isbn.delete_at(index)
 		end
 	end
 
